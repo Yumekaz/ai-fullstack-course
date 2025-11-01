@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dribbble Mockup - Showcase Design Work</title>
+    
+    <!-- Link to our external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Load Tailwind CSS via CDN (Crucial for styling) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Configure Tailwind to use Inter font and define custom colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    colors: {
+                        'dribbble-pink': '#ea4c89',
+                        'dribbble-gray': '#f8f7f4',
+                    }
+                }
+            }
+        }
+    </script>
+    
+    <!-- Lucide Icons for aesthetic icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+
+<body class="bg-white font-sans text-gray-800">
+
+    <!-- Header & Navigation -->
+    <header class="sticky top-0 z-20 bg-white border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16">
+            <!-- Logo -->
+            <a href="#" class="text-3xl font-extrabold tracking-tight text-dribbble-pink">dribbble.</a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex space-x-8 text-sm font-medium">
+                <a href="#" class="hover:text-dribbble-pink transition duration-150">Inspiration</a>
+                <a href="#" class="hover:text-dribbble-pink transition duration-150">Find Talent</a>
+                <a href="#" class="hover:text-dribbble-pink transition duration-150">Jobs</a>
+                <a href="#" class="hover:text-dribbble-pink transition duration-150">Learn Design</a>
+                <a href="#" class="hover:text-dribbble-pink transition duration-150">Go Pro</a>
+            </nav>
+
+            <!-- Actions -->
+            <div class="flex items-center space-x-4">
+                <button class="hidden sm:block text-sm text-gray-500 hover:text-dribbble-pink transition duration-150">
+                    Log in
+                </button>
+                <button class="px-4 py-2 text-sm font-semibold bg-dribbble-pink text-white rounded-full hover:bg-pink-600 transition duration-150 shadow-md">
+                    Sign up
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="py-16 sm:py-24 bg-dribbble-gray">
+            <div class="max-w-4xl mx-auto text-center px-4">
+                <h1 class="text-4xl sm:text-6xl font-extrabold leading-tight tracking-tight mb-4">
+                    The world’s leading community for creatives
+                </h1>
+                <p class="text-xl text-gray-600 mb-8">
+                    Millions of designers and agencies around the world showcase their portfolio work on Dribbble — the home to the world’s best design and creative professionals.
+                </p>
+                <div class="flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-4">
+                    <button class="px-8 py-3 text-lg font-bold bg-dribbble-pink text-white rounded-full hover:bg-pink-600 transition duration-200 shadow-lg">
+                        Sign up to explore
+                    </button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Design Shots Grid -->
+        <section class="py-12 bg-white">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <!-- Grid Filter/Header (Placeholder) -->
+                <div class="flex items-center justify-between mb-8">
+                    <h2 class="text-2xl font-bold text-gray-900">Trending Shots</h2>
+                    <div class="flex space-x-2">
+                        <button class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200">Popular</button>
+                        <button class="px-3 py-1 text-sm bg-gray-100 text-gray-700 rounded-full hover:bg-gray-200">New</button>
+                    </div>
+                </div>
+
+                <!-- Responsive Grid Container -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+                    
+                    <!-- Dribbble Card Component (Example 1) -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300 cursor-pointer">
+                        <img 
+                            src="https://placehold.co/600x450/ea4c89/ffffff?text=Product+Design" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x450/4A5568/ffffff?text=Placeholder+Image';"
+                            alt="Design shot featuring product interface" 
+                            class="w-full h-full object-cover aspect-4/3 transition duration-500 group-hover:scale-[1.02]"
+                        >
+                        <!-- Bottom Overlay -->
+                        <div class="absolute inset-x-0 bottom-0 p-4 h-1/4 flex items-end justify-between 
+                                    bg-gradient-to-t from-black/80 to-transparent 
+                                    opacity-0 transition-all duration-300 transform translate-y-full 
+                                    group-hover:opacity-100 group-hover:translate-y-0">
+                            
+                            <span class="text-white text-base font-semibold truncate">Website Redesign Mockup</span>
+                            
+                            <div class="flex items-center space-x-2">
+                                <span class="bg-white/30 text-white rounded-full p-1">
+                                    <i data-lucide="bookmark" class="w-4 h-4"></i>
+                                </span>
+                                <span class="bg-white text-dribbble-pink rounded-full p-1.5 flex items-center justify-center">
+                                    <i data-lucide="heart" class="w-4 h-4 fill-dribbble-pink"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <!-- Designer Tag (Always Visible) -->
+                        <div class="absolute bottom-0 left-0 p-3 text-sm flex items-center space-x-2 opacity-100 group-hover:opacity-0 transition duration-300">
+                             <img src="https://placehold.co/30x30/059669/ffffff?text=A" class="rounded-full w-6 h-6 border-2 border-white" alt="Designer Avatar">
+                             <span class="text-white font-medium drop-shadow-md">Creator Name</span>
+                        </div>
+                    </div>
+                    
+                    <!-- Dribbble Card Component (Example 2) -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300 cursor-pointer">
+                        <img 
+                            src="https://images.unsplash.com/photo-1742201589806-3c7135a3fe68?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=1965" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x450/4A5568/ffffff?text=Placeholder+Image';"
+                            alt="White wolf image" 
+                            class="w-full h-full object-cover aspect-4/3 transition duration-500 group-hover:scale-[1.02]"
+                        >
+                        <div class="absolute inset-x-0 bottom-0 p-4 h-1/4 flex items-end justify-between 
+                                    bg-gradient-to-t from-black/80 to-transparent 
+                                    opacity-0 transition-all duration-300 transform translate-y-full 
+                                    group-hover:opacity-100 group-hover:translate-y-0">
+                            
+                            <span class="text-white text-base font-semibold truncate">White Wolf Photography</span>
+                            
+                            <div class="flex items-center space-x-2">
+                                <span class="bg-white/30 text-white rounded-full p-1">
+                                    <i data-lucide="bookmark" class="w-4 h-4"></i>
+                                </span>
+                                <span class="bg-white text-dribbble-pink rounded-full p-1.5 flex items-center justify-center">
+                                    <i data-lucide="heart" class="w-4 h-4 fill-dribbble-pink"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-3 text-sm flex items-center space-x-2 opacity-100 group-hover:opacity-0 transition duration-300">
+                             <img src="https://placehold.co/30x30/1e40af/ffffff?text=B" class="rounded-full w-6 h-6 border-2 border-white" alt="Designer Avatar">
+                             <span class="text-white font-medium drop-shadow-md">Dusarea Studio</span>
+                        </div>
+                    </div>
+
+                    <!-- Dribbble Card Component (Example 3) -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300 cursor-pointer">
+                        <img 
+                            src="https://images.unsplash.com/photo-1742201603561-3c8bfe21a7db?ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&q=80&w=764" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x450/4A5568/ffffff?text=Placeholder+Image';"
+                            alt="Image of a surreal scene" 
+                            class="w-full h-full object-cover aspect-4/3 transition duration-500 group-hover:scale-[1.02]"
+                        >
+                        <div class="absolute inset-x-0 bottom-0 p-4 h-1/4 flex items-end justify-between 
+                                    bg-gradient-to-t from-black/80 to-transparent 
+                                    opacity-0 transition-all duration-300 transform translate-y-full 
+                                    group-hover:opacity-100 group-hover:translate-y-0">
+                            
+                            <span class="text-white text-base font-semibold truncate">Abstract Digital Art</span>
+                            
+                            <div class="flex items-center space-x-2">
+                                <span class="bg-white/30 text-white rounded-full p-1">
+                                    <i data-lucide="bookmark" class="w-4 h-4"></i>
+                                </span>
+                                <span class="bg-white text-dribbble-pink rounded-full p-1.5 flex items-center justify-center">
+                                    <i data-lucide="heart" class="w-4 h-4 fill-dribbble-pink"></i>
+                                </span>
+                            </div>
+                        </div>
+                         <div class="absolute bottom-0 left-0 p-3 text-sm flex items-center space-x-2 opacity-100 group-hover:opacity-0 transition duration-300">
+                             <img src="https://placehold.co/30x30/f97316/ffffff?text=C" class="rounded-full w-6 h-6 border-2 border-white" alt="Designer Avatar">
+                             <span class="text-white font-medium drop-shadow-md">Vivid Designer</span>
+                        </div>
+                    </div>
+
+                    <!-- Dribbble Card Component (Example 4) -->
+                    <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300 cursor-pointer">
+                        <img 
+                            src="https://placehold.co/600x450/3b82f6/ffffff?text=App+UI+Kit" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x450/4A5568/ffffff?text=Placeholder+Image';"
+                            alt="Design shot featuring mobile app UI" 
+                            class="w-full h-full object-cover aspect-4/3 transition duration-500 group-hover:scale-[1.02]"
+                        >
+                        <div class="absolute inset-x-0 bottom-0 p-4 h-1/4 flex items-end justify-between 
+                                    bg-gradient-to-t from-black/80 to-transparent 
+                                    opacity-0 transition-all duration-300 transform translate-y-full 
+                                    group-hover:opacity-100 group-hover:translate-y-0">
+                            
+                            <span class="text-white text-base font-semibold truncate">Finance App Dashboard</span>
+                            
+                            <div class="flex items-center space-x-2">
+                                <span class="bg-white/30 text-white rounded-full p-1">
+                                    <i data-lucide="bookmark" class="w-4 h-4"></i>
+                                </span>
+                                <span class="bg-white text-dribbble-pink rounded-full p-1.5 flex items-center justify-center">
+                                    <i data-lucide="heart" class="w-4 h-4 fill-dribbble-pink"></i>
+                                </span>
+                            </div>
+                        </div>
+                         <div class="absolute bottom-0 left-0 p-3 text-sm flex items-center space-x-2 opacity-100 group-hover:opacity-0 transition duration-300">
+                             <img src="https://placehold.co/30x30/8b5cf6/ffffff?text=D" class="rounded-full w-6 h-6 border-2 border-white" alt="Designer Avatar">
+                             <span class="text-white font-medium drop-shadow-md">UI/UX Master</span>
+                        </div>
+                    </div>
+                    
+                    <!-- More Placeholder Cards (Hidden content below the initial fold) -->
+                     <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300 cursor-pointer">
+                        <img 
+                            src="https://placehold.co/600x450/4ade80/ffffff?text=Branding+Mockup" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x450/4A5568/ffffff?text=Placeholder+Image';"
+                            alt="Design shot featuring branding elements" 
+                            class="w-full h-full object-cover aspect-4/3 transition duration-500 group-hover:scale-[1.02]"
+                        >
+                        <div class="absolute inset-x-0 bottom-0 p-4 h-1/4 flex items-end justify-between 
+                                    bg-gradient-to-t from-black/80 to-transparent 
+                                    opacity-0 transition-all duration-300 transform translate-y-full 
+                                    group-hover:opacity-100 group-hover:translate-y-0">
+                            
+                            <span class="text-white text-base font-semibold truncate">Geometric Logo Design</span>
+                            
+                            <div class="flex items-center space-x-2">
+                                <span class="bg-white/30 text-white rounded-full p-1">
+                                    <i data-lucide="bookmark" class="w-4 h-4"></i>
+                                </span>
+                                <span class="bg-white text-dribbble-pink rounded-full p-1.5 flex items-center justify-center">
+                                    <i data-lucide="heart" class="w-4 h-4 fill-dribbble-pink"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-3 text-sm flex items-center space-x-2 opacity-100 group-hover:opacity-0 transition duration-300">
+                             <img src="https://placehold.co/30x30/10b981/ffffff?text=E" class="rounded-full w-6 h-6 border-2 border-white" alt="Designer Avatar">
+                             <span class="text-white font-medium drop-shadow-md">Green Ink</span>
+                        </div>
+                    </div>
+                     <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300 cursor-pointer">
+                        <img 
+                            src="https://placehold.co/600x450/fca5a5/ffffff?text=Illustration+Art" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x450/4A5568/ffffff?text=Placeholder+Image';"
+                            alt="Design shot featuring digital illustration" 
+                            class="w-full h-full object-cover aspect-4/3 transition duration-500 group-hover:scale-[1.02]"
+                        >
+                        <div class="absolute inset-x-0 bottom-0 p-4 h-1/4 flex items-end justify-between 
+                                    bg-gradient-to-t from-black/80 to-transparent 
+                                    opacity-0 transition-all duration-300 transform translate-y-full 
+                                    group-hover:opacity-100 group-hover:translate-y-0">
+                            
+                            <span class="text-white text-base font-semibold truncate">Vector Character Design</span>
+                            
+                            <div class="flex items-center space-x-2">
+                                <span class="bg-white/30 text-white rounded-full p-1">
+                                    <i data-lucide="bookmark" class="w-4 h-4"></i>
+                                </span>
+                                <span class="bg-white text-dribbble-pink rounded-full p-1.5 flex items-center justify-center">
+                                    <i data-lucide="heart" class="w-4 h-4 fill-dribbble-pink"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-3 text-sm flex items-center space-x-2 opacity-100 group-hover:opacity-0 transition duration-300">
+                             <img src="https://placehold.co/30x30/9ca3af/ffffff?text=F" class="rounded-full w-6 h-6 border-2 border-white" alt="Designer Avatar">
+                             <span class="text-white font-medium drop-shadow-md">Sketch Artist</span>
+                        </div>
+                    </div>
+                     <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300 cursor-pointer">
+                        <img 
+                            src="https://placehold.co/600x450/fbbf24/ffffff?text=Motion+Graphics" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x450/4A5568/ffffff?text=Placeholder+Image';"
+                            alt="Design shot featuring motion graphics" 
+                            class="w-full h-full object-cover aspect-4/3 transition duration-500 group-hover:scale-[1.02]"
+                        >
+                        <div class="absolute inset-x-0 bottom-0 p-4 h-1/4 flex items-end justify-between 
+                                    bg-gradient-to-t from-black/80 to-transparent 
+                                    opacity-0 transition-all duration-300 transform translate-y-full 
+                                    group-hover:opacity-100 group-hover:translate-y-0">
+                            
+                            <span class="text-white text-base font-semibold truncate">Clean Animated UI</span>
+                            
+                            <div class="flex items-center space-x-2">
+                                <span class="bg-white/30 text-white rounded-full p-1">
+                                    <i data-lucide="bookmark" class="w-4 h-4"></i>
+                                </span>
+                                <span class="bg-white text-dribbble-pink rounded-full p-1.5 flex items-center justify-center">
+                                    <i data-lucide="heart" class="w-4 h-4 fill-dribbble-pink"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-3 text-sm flex items-center space-x-2 opacity-100 group-hover:opacity-0 transition duration-300">
+                             <img src="https://placehold.co/30x30/60a5fa/ffffff?text=G" class="rounded-full w-6 h-6 border-2 border-white" alt="Designer Avatar">
+                             <span class="text-white font-medium drop-shadow-md">Pixel Pioneer</span>
+                        </div>
+                    </div>
+                     <div class="group relative overflow-hidden rounded-xl shadow-lg hover:shadow-xl transition duration-300 cursor-pointer">
+                        <img 
+                            src="https://placehold.co/600x450/a78bfa/ffffff?text=Web+Design" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x450/4A5568/ffffff?text=Placeholder+Image';"
+                            alt="Design shot featuring responsive web layout" 
+                            class="w-full h-full object-cover aspect-4/3 transition duration-500 group-hover:scale-[1.02]"
+                        >
+                        <div class="absolute inset-x-0 bottom-0 p-4 h-1/4 flex items-end justify-between 
+                                    bg-gradient-to-t from-black/80 to-transparent 
+                                    opacity-0 transition-all duration-300 transform translate-y-full 
+                                    group-hover:opacity-100 group-hover:translate-y-0">
+                            
+                            <span class="text-white text-base font-semibold truncate">SaaS Landing Page</span>
+                            
+                            <div class="flex items-center space-x-2">
+                                <span class="bg-white/30 text-white rounded-full p-1">
+                                    <i data-lucide="bookmark" class="w-4 h-4"></i>
+                                </span>
+                                <span class="bg-white text-dribbble-pink rounded-full p-1.5 flex items-center justify-center">
+                                    <i data-lucide="heart" class="w-4 h-4 fill-dribbble-pink"></i>
+                                </span>
+                            </div>
+                        </div>
+                        <div class="absolute bottom-0 left-0 p-3 text-sm flex items-center space-x-2 opacity-100 group-hover:opacity-0 transition duration-300">
+                             <img src="https://placehold.co/30x30/374151/ffffff?text=H" class="rounded-full w-6 h-6 border-2 border-white" alt="Designer Avatar">
+                             <span class="text-white font-medium drop-shadow-md">Creative Agency</span>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+        </section>
+        
+        <!-- Call to Action Footer (Placeholder) -->
+        <footer class="bg-dribbble-gray py-16 text-center mt-12">
+            <h3 class="text-3xl font-bold mb-4">Find your next favorite design.</h3>
+            <p class="text-lg text-gray-600 mb-6">Explore the world’s best creative work and hire the right talent.</p>
+            <button class="px-8 py-3 text-lg font-bold bg-dribbble-pink text-white rounded-full hover:bg-pink-600 transition duration-200 shadow-lg">
+                Start Browsing
+            </button>
+        </footer>
+
+    </main>
+    
+    <!-- Initialize Lucide Icons -->
+    <script>
+        // Function to ensure icons are created after the DOM loads
+        document.addEventListener('DOMContentLoaded', () => {
+            lucide.createIcons();
+        });
+    </script>
+</body>
+</html>

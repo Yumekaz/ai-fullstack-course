@@ -1,0 +1,56 @@
+/* Basic Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+/* Hero Section Styling */
+.hero-section {
+    /* 1. Use a full-screen background image */
+    height: 100vh; /* vh stands for viewport height */
+    background-image: url('https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&q=80&w=2070');
+    background-size: cover;
+    background-position: center;
+
+    /* 4. Center everything using Flexbox */
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center;    /* Vertically center */
+    text-align: center;
+    color: white;
+}
+
+/* Main Heading Styling */
+.hero-content h1 {
+    /* 5. Use Google Fonts for styling the text */
+    font-family: 'Lobster', cursive;
+    font-size: 5rem; /* Large font size for impact */
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.7); /* Adds shadow for readability */
+    margin-bottom: 20px; /* Space between heading and button */
+}
+
+/* CTA Button Styling */
+.cta-button {
+    /* 3. Place a CTA Button below the heading */
+    padding: 12px 28px;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #333;
+    background-color: #f0ad4e; /* A nice orange color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease; /* Smooth transition for hover effect */
+}
+
+/* 6. Add hover effect on the button */
+.cta-button:hover {
+    background-color: #ec971f; /* A darker orange on hover */
+    transform: scale(1.05); /* Slightly enlarge the button */
+}

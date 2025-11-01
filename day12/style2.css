@@ -1,0 +1,30 @@
+/* *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+
+#box{
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background-color: aquamarine;
+}
+#smallbox{
+    position: absolute;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    background-color: chocolate;
+}
+#slide{
+    position: fixed;
+    right: 0;
+    height: 200px;
+    width: 60px;
+    background-color: red;
+} */

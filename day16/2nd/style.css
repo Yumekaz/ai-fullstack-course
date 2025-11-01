@@ -1,0 +1,75 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+    /* Added to center the card for better visualization */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #f0f0f0; 
+}
+
+.card {
+    height: 300px;
+    width: 300px;
+    border-radius: 10px;
+    background-color: crimson;
+    overflow: hidden;
+    position: relative; 
+    transition: 
+        transform 0.3s ease, 
+        box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+}
+
+.card img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.card:hover img {
+    transform: scale(1.05);
+}
+
+
+/* -------------------- UPDATED .bottom STYLES -------------------- */
+.bottom {
+    /* Changed height to 100% to cover the whole card */
+    height: 100%; 
+    width: 100%;
+    background-color: rgba(220, 20, 60, 0.75); /* Slight transparency to hint at the image below */
+    position: absolute; 
+    top: 0; /* Aligns to the top of the card */
+    /* Initially pushes the div completely down and off the screen */
+    transform: translateY(100%); 
+    opacity: 0; 
+    transition: 
+        transform 0.5s ease-out, /* Slower and smooth slide-in */
+        opacity 0.4s ease;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 1.5em;
+    font-weight: bold;
+    /* Optional: Add a message to demonstrate the overlay */
+    content: "VIEW DETAILS"; 
+}
+
+/* -------------------- UPDATED HOVER EFFECTS FOR .bottom -------------------- */
+.card:hover .bottom {
+    transform: translateY(0); /* Slides the overlay up to fully cover the card (0 offset) */
+    opacity: 1; /* Makes the overlay fully visible */
+}
