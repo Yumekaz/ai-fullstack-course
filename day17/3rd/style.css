@@ -1,0 +1,40 @@
+/* Global Reset */
+html {
+  box-sizing: border-box;
+}
+
+*, *::before, *::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+/* Full-page centered layout */
+html, body {
+  height: 100%;
+  width: 100%;
+  display: grid;
+  place-items: center;
+  background-color: #1a1a1a;
+  font-family: 'Arial', sans-serif;
+}
+
+
+.gif-text {
+  /* 1. Make the text large and bold for the effect */
+  font-size: 12vw; /* Use vw for responsive font size */
+  font-weight: 900;
+  text-transform: uppercase;
+
+  /* 2. Set the background to your GIF */
+  background-image: url('https://media.giphy.com/media/l4KibK3JwaVo0CjDO/giphy.gif');
+  background-size: cover;
+  background-position: center;
+
+  /* 3. Clip the background to the text */
+  -webkit-background-clip: text; /* For Safari/Chrome */
+  background-clip: text;
+
+  /* 4. Make the text color transparent to reveal the GIF */
+  color: transparent;
+}
