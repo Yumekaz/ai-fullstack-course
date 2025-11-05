@@ -1,0 +1,28 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+@mixin button-styles($bg-color) {
+  background-color: $bg-color;
+  color: white;
+  padding: 20px 30px;
+  border: none;
+  border-radius: 7px;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.blue {
+  @include button-styles(blue);
+}
+.red {
+  @include button-styles(red);
+}
