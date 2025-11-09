@@ -1,0 +1,30 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html{
+    // default font size 16px
+    font-size: 100px;
+}
+
+// h1{
+//      font-size: 1rem; //1rem=40px
+                        //1rem = font size of root element
+                        // here root element is html
+                        //1rem*100px(html)=100px
+// }
+
+h1{
+    font-size: 1em; //1em=16px
+                    //1em=font size of parent or nearest ancestor element
+                    //here parent element is body
+                    //1em*100px(html)=100px
+}

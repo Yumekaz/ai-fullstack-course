@@ -1,0 +1,19 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+}
+
+html {
+  font-size: 100px;
+}
+
+h1 {
+  font-size: 1em;
+}/*# sourceMappingURL=style.css.map */
